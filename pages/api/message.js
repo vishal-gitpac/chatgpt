@@ -23,6 +23,7 @@ export default async function handler(req, res) {
       replyToBeSent = completion.data.choices[0].text;
     } catch (error) {
       if (error.response) {
+        console.log(error.response);
         replyToBeSent = "There was an issue with the server";
       } else {
         // error getting response
